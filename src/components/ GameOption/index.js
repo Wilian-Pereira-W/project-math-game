@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 function GameOption() {
   return (
-    <div >
+    <div className={styles.container}>
         <button>
           <i class="bi bi-patch-plus"></i>
           <span>Adição</span>
