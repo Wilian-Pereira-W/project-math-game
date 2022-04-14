@@ -37,9 +37,7 @@ function Sum() {
         setAnswer('')
         setCounter(counter + 1)
       }, 300);
-    } else {
-      console.log("errou");
-    }
+    };
   };
   
   return (
