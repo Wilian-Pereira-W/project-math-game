@@ -2,11 +2,10 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function ModalVictory({setIsModalVictory, setMainTime, setCounter}) {
+function ModalVictory({setIsModalVictory, setMainTime, setCounter, score}) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  
   const handleClick = () => {
     setMainTime(30);
     setCounter(0);
@@ -16,6 +15,7 @@ function ModalVictory({setIsModalVictory, setMainTime, setCounter}) {
   return (
     <div className={styles.container}>
       <h1>Após muito sacrifício, você conseguiu alcançar o seu objetivo. Parabéns pela conquista!</h1>
+      <span>{`Restou: ${score}s`}</span>
       <div className={styles.containerBtn}>
         <button
           onClick={() => handleClick()}
