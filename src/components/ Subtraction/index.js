@@ -19,7 +19,11 @@ function Subtraction() {
   }, []);
 
   useEffect(() => {
-    setSubtraction(numberOne - numberTwo);
+    if(numberOne > numberTwo){
+      setSubtraction(numberOne - numberTwo);
+    } else {
+      setSubtraction(numberTwo - numberOne);
+    }
     const array = [...Array(3)].map(()=>Math.floor(Math.random() * 60));
     setRandomValue(array);
   }, [numberOne, numberTwo]);
@@ -45,10 +49,11 @@ function Subtraction() {
           <h4>{counter} / 10</h4>
           <Timer counter={counter} setCounter={setCounter}/>
           <div className={styles.sum}>
-            <span>{numberOne}</span>
-            <span> - </span>
-            <span>{numberTwo} = </span>
-            <span>{answer}</span>
+            {numberOne > numberTwo ? (
+              <><span>{numberOne}</span><span> - </span><span>{numberTwo} = </span><span>{answer}</span></>
+            ) : (
+              <><span>{numberTwo}</span><span> - </span><span>{numberOne} = </span><span>{answer}</span></>
+            )}         
           </div>
           <div className={styles.results}>
             {results.sort(()=> Math.random() - 0.5).map((result, index) => (
