@@ -32,13 +32,13 @@ function GameOption() {
             <span>Multiplicação</span>
           </button>
         </a>
-        <a href='/division'>
+        <a href='/feedback'>
           <button
             type="button"
-            value="Division"
+            value="FeedBack"
           >
-            <i className="bi bi-slash-square"></i>
-            <span>Divisão</span>
+            <i class="bi bi-chat-heart"></i>
+            <span>FeedBack</span>
           </button>
         </a>
     </div>
