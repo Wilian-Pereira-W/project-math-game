@@ -11,6 +11,7 @@ function Game() {
   // console.log(location.pathname)
   return (
     <div className={styles.container}>
+      <a href='/'>Math Game</a>
       {location.pathname.substring(1) === 'sum' && <Sum />}
       {location.pathname.substring(1) === 'subtraction' && <Subtraction />}
       {location.pathname.substring(1) === 'multiplication' && <Multiplication />}

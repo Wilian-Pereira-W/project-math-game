@@ -59,7 +59,6 @@ function Sum() {
                 {result}
               </button>
             ))}
-          
           </div>
         </div>
    
