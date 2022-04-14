@@ -37,7 +37,7 @@ function GameOption() {
             type="button"
             value="FeedBack"
           >
-            <i class="bi bi-chat-heart"></i>
+            <i className="bi bi-chat-heart"></i>
             <span>FeedBack</span>
           </button>
         </a>
