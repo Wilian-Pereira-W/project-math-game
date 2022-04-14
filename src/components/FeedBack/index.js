@@ -1,12 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { useNavigate } from 'react-router-dom';
 
 function FeedBack() {
-  const navigate = useNavigate();
-  const handleClick = () => {
-   navigate('/');
-  }
 
   return (
     <div className={styles.container}>
@@ -22,7 +17,6 @@ function FeedBack() {
         <textarea id="w3review" name="w3review" rows="4" cols="50" required />
         <div className={styles.containerBtn}>
           <button type="submit">Enviar</button>
-          <button type="submit" onClick={() => handleClick()}>Home</button>
         </div>
       </form>
    

@@ -33,7 +33,7 @@
 
 .container button {
   width: 80px;
-  height: 60px;
+  height: 40px;
   margin-right: 28px;
   margin-left: 28px;
   margin-top: 15px;
@@ -48,4 +48,5 @@
 
 .containerBtn {
   display: flex;
+  justify-content: center;
 }
