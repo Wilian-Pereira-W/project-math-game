@@ -9,8 +9,7 @@ function Timer({ counter, setCounter }) {
   const [mainTime, setMainTime] = useState(30);
   const [isModalDefeat, setIsModalDefeat] = useState(false);
   const [isModalVictory, setIsModalVictory] = useState(false);
-  const [score, setScore] = useState(0)
-  useInterval(() => {
+  const interval = useInterval(() => {
     setMainTime(mainTime - 1);
     if(mainTime === 0) {
       setIsModalDefeat(true);
@@ -19,16 +18,20 @@ function Timer({ counter, setCounter }) {
 
   useEffect(() => {
     if(counter === 10) {
-      clearInterval(mainTime);
-      setScore(mainTime);
+      clearInterval(interval);
       setIsModalVictory(true);
     }
-  }, [counter, mainTime]);
+  }, [counter, interval, mainTime]);
 
   return (
     <>
     {isModalDefeat &&  <ModalDefeat setIsModalDefeat={setIsModalDefeat} setMainTime={setMainTime}/>}
-    {isModalVictory && <ModalVictory setIsModalVictory={setIsModalVictory} setMainTime={setMainTime} setCounter={setCounter} score={score}/>}
+    {isModalVictory && <ModalVictory 
+      setIsModalVictory={setIsModalVictory} 
+      setMainTime={setMainTime} 
+      setCounter={setCounter} 
+      mainTime={mainTime}
+      />}
     <div className={styles.container}>
       <p className={styles.timer}>{mainTime}</p>
     </div></>

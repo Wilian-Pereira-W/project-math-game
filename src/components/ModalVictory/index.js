@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-function ModalVictory({setIsModalVictory, setMainTime, setCounter, score}) {
+function ModalVictory({setIsModalVictory, setMainTime, setCounter,  mainTime }) {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const [score, setScore] = useState(0);
+  
+  useEffect(() => {
+    clearInterval(mainTime);
+    setScore(mainTime);
+  }, [mainTime])
   const handleClick = () => {
     setMainTime(30);
     setCounter(0);
