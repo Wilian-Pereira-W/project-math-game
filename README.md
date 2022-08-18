@@ -1,5 +1,7 @@
 # Math Game
 
+## Um jogo para treinar adição, subtração e multiplicação. Divirta-se.
+
 ## 1 - Clone o repositório 'SSH'.
 
 ###  git clone git@github.com:Wilian-Pereira-W/project-math-game.git
