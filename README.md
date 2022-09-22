@@ -32,7 +32,7 @@
 
 <h5>2 - Entrar na pasta do projeto</h5>
 
-<h6>cd project-board</h6>
+<h6>cd project-math-game</h6>
 
 <h5>3 - Instalar as dependências do projeto.</h5>
 
