@@ -2,7 +2,7 @@
 
 <h2>Sobre o projeto.</h2>
 
-<p>Um jogo para treinar adição, subtração e multiplicação. Divirtam-se.<p>
+<p>Jogo educativo para aprender matemática: Adição, Subtração, Multiplicação,. Divirtam-se.<p>
   
 <h2>Tecnologias utilizadas.</h2>
 <h3>Front-end</h3>
